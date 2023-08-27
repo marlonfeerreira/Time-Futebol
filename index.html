@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Cor de fundo mais escura */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("futebol-background.png"); /* Caminho para a imagem */
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  .header-bar {
+    background-color: green; /* Cor de fundo da barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .title {
+    font-size: 28px; /* Texto maior */
+    margin: 0; /* Margem zerada para o título */
+  }
+  .index {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-right: 20px;
+  }
+  .index a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  .index a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo ao passar o mouse */
+    border-color: white;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 60px;
+  }
+  .section {
+    text-align: center; /* Centralizar o conteúdo */
+    width: 100%;
+    padding: 20px; /* Maior espaçamento interno */
+    margin: 20px 0;
+    background-color: rgba(200, 241, 187, 0.4); /* Fundo mais escuro */
+    border-radius: 10px; /* Borda arredondada */
+  }
+  .section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Borda arredondada */
+    margin-top: 20px; /* Espaçamento superior */
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  .table th, .table td {
+    border: 1px solid white;
+    padding: 10px; /* Maior espaçamento interno */
+    text-align: center;
+  }
+  .news {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .news a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center; /* Centralizar verticalmente */
+    justify-content: center; /* Centralizar horizontalmente */
+    margin: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  .news a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo ao passar o mouse */
+    border-color: white;
+  }
+  .news img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="header-bar">
+    <h1 class="title">Times de Futebol</h1>
+    <div class="index">
+      <a href="#historia">História</a>
+      <a href="#partidas">Partidas da Semana</a>
+      <a href="#novidades">Novidades</a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="section historia" id="historia">
+        <h2 class="title">História do Futebol</h2>
+        <p>No século XIX, na Inglaterra, surgiu o esporte que se tornaria uma paixão global: o futebol. O jogo evoluiu a partir de várias práticas de bola e chute ao gol, ganhando organização com a padronização de regras. Em 1863, a fundação da Football Association formalizou as normas modernas do jogo. O futebol logo se espalhou para outros países, cativando corações e criando rivalidades. Hoje, é o esporte mais popular do mundo, unindo culturas e nações em competições emocionantes.</p>
+      <img src="Primeira-partida.jpeg" alt="Partida de Futebol">
+    </div>
+    <div class="section partidas" id="partidas">
+      <h2 class="title">Partidas da Semana</h2>
+      <table class="table">
+        <tr>
+          <th>Time A</th>
+          <th>Time B</th>
+          <th>Data</th>
+        </tr>
+        <tr>
+          <td>Time 1</td>
+          <td>Time 2</td>
+          <td>DD/MM</td>
+        </tr>
+      </table>
+    </div>
+    <div class="section novidades" id="novidades">
+      <h2 class="title">Novidades</h2>
+      <div class="news">
+        <a href="https://ge.globo.com/">Globo Esporte<img src="ge.png" alt="Novidade 1"></a>
+        <a href="https://www.uol.com.br/esporte/">UOL Esportes<img src="uol.jpeg" alt="Novidade 2"></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
